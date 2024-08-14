@@ -96,13 +96,16 @@ int     main(int argc, char *argv[])
 {
 	int	x;
 	int	y;
-    int n;
+       	int	n;
+
 
     if (ft_chk_valid_arguments(&x,&y,&n, argv) || x < 1 || y < 1)
     {
         ft_error(x, y);
         return (-1);
     }
+    if (argc == 0)
+	    return (-1);
     rush(x, y, n);
 	return (0);
 }
